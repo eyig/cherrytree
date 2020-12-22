@@ -1,13 +1,7 @@
-cherrytree (0.99.25-1) focal; urgency=low
+cherrytree (0.99.27-1) focal; urgency=low
 
-  * icon theme update (#1408, work of @userfav/Ugo Yak)
-  * fix TOC generation when existing anchor but wrong name (#1382)
-  * export to plain text do not alter node name case and prefix with a # per node level (#1385)
-  * fix spell-check language selection from preferences dialog not working (#1400)
-  * fix spell-check language selection from right click menu was not saved to preferences
-  * added missing tooltips on the bookmarks handle dialog (#1403)
-  * improved command line switch --new-window (#1339)
-  * updated language Spanish to 100% (@userfav), fixed typo in language French (@bataillec)
+  * fix select text with keyboard not working, regression of 0.99.26 (#1441, #1444, #1448)
+  * updated Dutch (Luuk Geurts)
 
 
- -- Giuseppe Penone <giuspen@gmail.com>  Tue, 08 Dec 2020 21:46:10 +0000
+ -- Giuseppe Penone <giuspen@gmail.com>  Mon, 21 Dec 2020 23:19:07 +0000

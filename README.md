@@ -109,7 +109,7 @@ xdg-open /usr/share/doc/libgspell-1-dev/html/index.html
 
 Install dependencies:
 ```sh
-sudo pacman -S gtksourceviewmm libxml++2.6 gspell
+sudo pacman -S gtksourceviewmm libxml++2.6 gspell uchardet
 ```
 
 Get cherrytree source, compile and run:
@@ -124,11 +124,11 @@ make -j$(nproc --all)
 ./build/cherrytree
 ```
 
-## Building Cherrytree on Fedora
+## Building Cherrytree on Fedora 33
 
 Install dependencies:
 ```sh
-sudo dnf install @development-tools gcc-c++ libtool autoconf gtkmm30-devel gtksourceviewmm3-devel libxml++-devel libsq3-devel gettext-devel gettext intltool libxml2 gspell-devel
+sudo dnf install @development-tools gcc-c++ libtool autoconf gtkmm30-devel gtksourceviewmm3-devel libxml++-devel libsq3-devel gettext-devel gettext intltool libxml2 gspell-devel cmake libcurl-devel uchardet uchardet-devel
 ```
 
 Get cherrytree source, compile and run:
@@ -140,7 +140,7 @@ mkdir build
 cd build
 cmake ../
 make -j$(nproc --all)
-./build/cherrytree
+./cherrytree
 ```
 
 (OPTIONAL) Download Documentation
