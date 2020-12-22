@@ -19,8 +19,9 @@
 
 	"remoteEnv": {
 		// Uncomment and update to specify the X server to use inside the container.
+		// If you're running the container on your local Windows host, replace localhost with the IP-Adress of your WSL Ethernet adapter
 		// You may have to use the xhost tool to allow the connection.
-		//"DISPLAY": "x11server:0",
+		"DISPLAY": "localhost:0.0",
 	},
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.

@@ -45,11 +45,27 @@ It is possible to use a container as a full-featured development environment fro
 This works on any operating system that supports Docker.
 
 1. Install the [system requirements](https://code.visualstudio.com/docs/remote/containers#_system-requirements).
-2. Open the project in VS Code.
-3. (optional) Edit `.devcontainer/devcontainer.json` to set your `DISPLAY` environment variable and/or edit other settings.
+2. If you are running VSCode on Windows:
+   * Install an [X Window System](https://wikipedia.org/wiki/X_Window_System) for Windows such as [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Cygwin/X](https://en.wikipedia.org/wiki/Cygwin/X)
+   * Make sure you have set **autocrlf** in git to **input**
+3. Get cherrytree source and update the submodules
+```cmd
+git clone https://github.com/giuspen/cherrytree.git
+cd cherrytree
+git submodule update --init
+```
+4. Add the `cherrytree` directory to the shared directories in Docker (Settings -> Resources -> File Sharing)
+5. Open the project in VS Code.
+```cmd
+code .
+```
+6. Edit `.devcontainer/devcontainer.json` to set your `DISPLAY` environment variable and/or edit other settings.
    It is also possible to run the container on a remote Docker host, see the comment at the end.
-4. Run the *Remote-Containers: Open Folder in Container...* command.
-5. See previous section for Build and Debug instructions.
+7. Run the *Remote-Containers: Open Folder in Container...* command.
+
+Build with: Ctrl+Shift+B
+Debug with: F5
+
 
 ## To test install locally and create a package
 ```sh
